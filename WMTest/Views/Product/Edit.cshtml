@@ -1,0 +1,60 @@
+﻿@model WMTest.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Naziv" class="control-label"></label>
+                <input asp-for="Naziv" class="form-control" />
+                <span asp-validation-for="Naziv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Opis" class="control-label"></label>
+                <input asp-for="Opis" class="form-control" />
+                <span asp-validation-for="Opis" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kategorija" class="control-label"></label>
+                <input asp-for="Kategorija" class="form-control" />
+                <span asp-validation-for="Kategorija" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Proizvođač" class="control-label"></label>
+                <input asp-for="Proizvođač" class="form-control" />
+                <span asp-validation-for="Proizvođač" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dobavljač" class="control-label"></label>
+                <input asp-for="Dobavljač" class="form-control" />
+                <span asp-validation-for="Dobavljač" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cena" class="control-label"></label>
+                <input asp-for="Cena" class="form-control" />
+                <span asp-validation-for="Cena" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

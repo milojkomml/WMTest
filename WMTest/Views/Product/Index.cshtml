@@ -1,0 +1,38 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Proizvodi</h1>
+<p>Editovanje proizvoda se vrsi klikom na njegov ID</p>
+
+
+<a href="@Url.Action("Create", "Product")">Dodaj novi proizvod</a>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>Id</th>
+        <th>Naziv</th>
+        <th>Opis</th>
+        <th>Kategorija</th>
+        <th>Proizvođač</th>
+        <th>Dobavljač</th>
+        <th>Cena</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td><a href="@Url.Action("Edit", "Product", new {@id = product.Id })">@product.Id</a></td>
+            <td>@product.Naziv</td>
+            <td>@product.Opis</td>
+            <td>@product.Kategorija</td>
+            <td>@product.Proizvođač</td>
+            <td>@product.Dobavljač</td>
+            <td>@product.Cena</td>
+            <td><a href="@Url.Action("Delete", "Product", new {@id = product.Id })">Obrisi</a></td>
+        </tr>
+    }
+</table>
+
+
